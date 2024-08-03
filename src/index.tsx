@@ -24,6 +24,13 @@ const Page = ({ title, messages }) => (
 );
 
 const app = new Elysia()
+  .trace(async ({ onHandle }) => {
+    onHandle(({ begin, onStop }) => {
+      onStop(({ end }) => {
+        console.log('handle took', end - begin, 'ms')
+      })
+    })
+  })
   .use(html())
   .get("/", () => "Hello Elysia")
   .get("/hi", () => "hi")
