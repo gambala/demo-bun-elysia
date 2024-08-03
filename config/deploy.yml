@@ -12,6 +12,5 @@ registry:
 healthcheck:
   interval: 10s
   path: /
-  cmd: ls -l > /dev/null
 builder:
   multiarch: false
