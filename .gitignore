@@ -40,3 +40,10 @@ yarn-error.log*
 **/*.log
 package-lock.json
 **/*.bun
+
+# Kamal envs
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
