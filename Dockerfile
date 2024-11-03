@@ -2,9 +2,6 @@ FROM oven/bun:alpine
 
 WORKDIR /app
 
-# Install curl for Kamal health checks
-RUN apk add --no-cache curl
-
 COPY --link package.json bun.lockb /app/
 RUN bun install --production
 
