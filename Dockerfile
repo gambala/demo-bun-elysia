@@ -1,7 +1,7 @@
 FROM oven/bun:alpine
   WORKDIR /app
 
-  COPY --link package.json bun.lockb /app/
+  COPY --link package.json bun.lock /app/
   RUN bun install --production
 
   COPY --link src src
